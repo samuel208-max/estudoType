@@ -1,0 +1,134 @@
+// ==================================================
+// 🛠️ COMANDOS BASH ESSENCIAIS PARA TYPESCRIPT
+// ==================================================
+
+// 🎯 COMPILAÇÃO E EXECUÇÃO
+npx tsc arquivo.ts                    // Compila um arquivo específico
+npx tsc --watch                       // Compila TODOS os .ts automaticamente
+node arquivo.js                       // Executa o JavaScript
+
+npx tsc arquivo.ts --target ES2015    // Compila para versão específica do JS
+npx tsc --noEmit                      // Verifica erros SEM gerar .js
+
+
+
+// 📁 GERENCIAMENTO DE ARQUIVOS
+ls                                    // Lista arquivos na pasta
+ls *.ts                               // Lista só arquivos TypeScript
+rm arquivo.js                         // Remove arquivo .js (Linux/Mac)
+del arquivo.js                        // Remove arquivo .js (Windows)
+
+
+
+// 🔧 INSTALAÇÃO DE BIBLIOTECAS
+npm install @types/node --save-dev    // Instala tipos para Node.js
+npm install react @types/react --save // Instala React com tipos
+npm install -g typescript             // Instala TypeScript globalmente
+
+
+
+// 📊 INFORMAÇÕES DO PROJETO
+npx tsc --version                     // Mostra versão do TypeScript
+npm list typescript                   // Mostra versão instalada
+npx tsc --showConfig                  // Mostra configuração carregada
+
+
+
+// 🧹 LIMPEZA E MANUTENÇÃO
+npx tsc --build --clean               // Limpa saídas de compilação
+rm -rf node_modules                   // Remove node_modules (Linux/Mac)
+rd /s node_modules                    // Remove node_modules (Windows)
+npm install                           // Recria node_modules
+
+
+
+// 🚀 SCRIPTS PERSONALIZADOS (adicionar no package.json)
+// "scripts": {
+//   "build": "tsc",
+//   "dev": "tsc --watch",
+//   "start": "node dist/index.js"
+// }
+npm run build                         // Executa script "build"
+npm run dev                           // Executa script "dev"
+
+
+
+// 🔍 DEPURAÇÃO E ANÁLISE
+npx tsc --extendedDiagnostics         // Mostra diagnósticos detalhados
+npx tsc --listFiles                   // Lista todos os arquivos compilados
+npx tsc --traceResolution             // Mostra como resolve imports
+
+
+
+// ⚙️ CONFIGURAÇÕES ÚTEIS NO tsconfig.json
+// "target": "ES2020"                 // Versão do JavaScript alvo
+// "strict": true                     // Ativa todas verificações rigorosas  
+// "outDir": "./dist"                 // Pasta de saída dos .js
+// "rootDir": "./src"                 // Pasta de origem dos .ts
+
+
+
+// 🎯 COMANDOS PARA PROJETOS COM MÚLTIPLOS ARQUIVOS
+npx tsc                               // Compila TODOS os .ts do projeto
+npx tsc src/*.ts --outDir dist        // Compila arquivos específicos para pasta
+
+
+
+// 📦 TYPES PARA BIBLIOTECAS EXTERNAS
+npm install @types/lodash --save-dev  // Instala tipos para lodash
+npm install @types/express --save-dev // Instala tipos para Express
+
+
+
+// 🔄 ATUALIZAÇÕES
+npm update typescript                 // Atualiza TypeScript
+npm outdated                          // Mostra pacotes desatualizados
+
+
+
+// 🗑️ DESINSTALAÇÃO
+npm uninstall typescript --save-dev   // Remove TypeScript
+npm cache clean --force               // Limpa cache do npm
+
+
+
+// ==================================================
+// 💡 COMBINAÇÕES ÚTEIS
+// ==================================================
+
+// Compilar e executar em um comando:
+npx tsc arquivo.ts && node arquivo.js
+
+// Verificar erros sem compilar:
+npx tsc --noEmit --project .
+
+// Compilar para produção (com otimizações):
+npx tsc --target ES2020 --module commonjs --outDir dist --strict
+
+
+
+// ==================================================
+// 🚀 FLUXO DE TRABALHO PROFISSIONAL
+// ==================================================
+
+// 1. npx tsc --watch                 (Terminal 1 - Desenvolvimento)
+// 2. npm run start                   (Terminal 2 - Execução)
+// 3. npm run build                   (Terminal Único - Produção)
+
+
+
+// ==================================================
+// 🎯 DICA FINAL: CRIE SCRIPTS NO package.json
+// ==================================================
+
+// Adicione isso no seu package.json:
+/*
+"scripts": {
+  "dev": "tsc --watch",
+  "build": "tsc",
+  "start": "node dist/main.js",
+  "clean": "rm -rf dist"
+}
+*/
+
+// Agora use: npm run dev, npm run build, etc!

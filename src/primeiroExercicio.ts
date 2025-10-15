@@ -149,14 +149,33 @@ function buscarLivrosPorAutor(autor: string): void {
     }
 }
 
+
+// Função 6: Remover livro da lista
+function removerLivro(titulo: string): void {
+    const indice = meusLivros.findIndex(livro => livro.titulo === titulo);
+    
+    if (indice !== -1) {
+        const livrosRemovidos = meusLivros.splice(indice, 1);
+        const livroRemovido = livrosRemovidos[0];
+        
+        if (livroRemovido) {
+            console.log(`🗑️ Livro "${livroRemovido.titulo}" removido com sucesso!`);
+        }
+    } else {
+        console.log(`❌ Livro "${titulo}" não encontrado na biblioteca.`);
+    }
+}
+
+
+
 buscarLivrosPorAutor("Rick Riordan")
-
-
 // 🧪 TESTANDO O SISTEMA
 console.log("=== SISTEMA DE BIBLIOTECA ===");
 
 // Lista livros iniciais
 listarLivros();
+
+removerLivro("O diario de um banana 1");
 
 // Mostra páginas lidas
 console.log(`\n📖 Total de páginas lidas: ${totalPaginasLidas()}`);

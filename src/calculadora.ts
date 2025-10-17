@@ -1,23 +1,23 @@
-let numero1: number = 2;
-let numero2: number = 5;
+let numero1: number = 5;
+let numero2: number = 2;
 
-function somar() {
-    return `A soma dos dois numeros é ${numero1 + numero2}`;
+function somar(): string {
+    return `A soma dos dois números é ${numero1 + numero2}.`;
 }
 
-function multiplicar() {
-    return numero1 * numero2;
+function multiplicar(): string {
+    return `A multiplicação dos dois números é ${numero1 * numero2}.`;
 }
 
-function subtração() {
-    return numero1 - numero2;
+function subtração(): string {
+    return `A subtração dos dois números é ${numero1 - numero2}.`;
 }
 
-function divisão() {
-    return numero1 / numero2;
+function divisão(): string {
+    return `A divisão dos dois números é ${numero1 / numero2}.`;
 }
 
-somar();
-multiplicar();
-subtração();
-divisão();
+console.log(somar());
+console.log(multiplicar());
+console.log(subtração());
+console.log(divisão());

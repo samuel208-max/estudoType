@@ -1,23 +1,20 @@
-let numero1: number = 5;
-let numero2: number = 2;
-
-function somar(): string {
-    return `A soma dos dois números é ${numero1 + numero2}.`;
+function somar(a: number, b: number): string {
+    return `A soma dos dois números é ${a + b}.`;
 }
 
-function multiplicar(): string {
-    return `A multiplicação dos dois números é ${numero1 * numero2}.`;
+function multiplicar(a: number, b: number): string {
+    return `A multiplicação dos dois números é ${a * b}.`;
 }
 
-function subtração(): string {
-    return `A subtração dos dois números é ${numero1 - numero2}.`;
+function subtracao(a: number, b: number): string {
+    return `A subtração dos dois números é ${a - b}.`;
 }
 
-function divisão(): string {
-    return `A divisão dos dois números é ${numero1 / numero2}.`;
+function divisao(a: number, b: number): string {
+    return `A divisão dos dois números é ${a / b}.`;
 }
 
-console.log(somar());
-console.log(multiplicar());
-console.log(subtração());
-console.log(divisão());
+console.log(somar(10, 10));
+console.log(multiplicar(10, 10));
+console.log(subtracao(10, 10));
+console.log(divisao(10, 10));
